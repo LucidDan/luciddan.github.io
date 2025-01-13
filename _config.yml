@@ -1,0 +1,72 @@
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+title: Dan Sloan
+email: contact@dansloan.org
+description: >- # this means to ignore newlines until "baseurl:"
+  A mix of personal and professional thoughts and ramblings, by Dan Sloan.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://dansloan.org" # the base hostname & protocol for your site, e.g. http://example.com
+github_username:  luciddan
+relative_permalinks: false
+permalink: :title/  # permalink: no dates
+paginate: 100
+incremental: true
+
+timezone: Australia/Melbourne
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-mentions
+  - jekyll-paginate
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jemoji
+
+include:
+  - "_pages"
+  - "/.well-known"
+
+markdown: kramdown
+kramdown:
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+
+collections:  # process the _data folder
+  components:
+    output: false
+  appearances:
+    output: false
+  games:
+    output: false
+  movies:
+    output: false
+  playlists:
+    output: true
+    permalink: /:collection/:name/
+  products:
+    output: false
+    permalink: /:collection/:name/
+  projects:
+    output: false
+    permalink: /:collection/:name/
+  series:
+    output: false
+  topics:
+    output: true
+    permalink: /:collection/:name/
+
+exclude:
+  - ".idea"
+
+logo: /public/img/dan.jpg
+
+social:
+  name: Dan Sloan
+  links:
+    - https://github.com/luciddan
+    - https://fosstodon.org/@luciddan/
+    - https://hub.docker.com/u/luciddan/
+    - https://www.buymeacoffee.com/luciddan
